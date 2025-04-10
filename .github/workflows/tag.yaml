@@ -1,6 +1,6 @@
 name: Tag
 
-on:  # yamllint disable-line rule:truthy
+on:
   push:
     branches:
       - main
@@ -14,5 +14,5 @@ jobs:
       - name: Bump version and push tag
         uses: anothrNick/github-tag-action@v1
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}  # Use the secret
+          GITHUB_TOKEN: ${{ secrets.Token }}  # Use the correct secret name here
           DEFAULT_BUMP: patch
